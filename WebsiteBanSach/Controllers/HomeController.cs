@@ -22,6 +22,15 @@ namespace WebsiteBanSach.Controllers
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
+            ViewBag.Title = "About";
+
+            return View();
+        }
+
+        public ActionResult Map()
+        {
+            ViewBag.Message = "Google Map's Store";
+            ViewBag.Title = "Map's Store";
 
             return View();
         }
