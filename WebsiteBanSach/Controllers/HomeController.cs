@@ -16,7 +16,7 @@ namespace WebsiteBanSach.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            return View("TrangChu");
         }
 
         public ActionResult About()
