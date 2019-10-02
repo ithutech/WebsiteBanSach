@@ -26,6 +26,21 @@ namespace WebsiteBanSach
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
             //BundleTable.EnableOptimizations = true;
+
+            //Style Grocery Template
+            bundles.Add(new StyleBundle("~/Template/grocery/css").Include(
+                      "~/Template/grocery/css/bootstrap.css",
+                      "~/Template/grocery/css/style.css",
+                      "~/Template/grocery/css/font-awesome.css"));
+            //Javascript Grocery Template
+            bundles.Add(new ScriptBundle("~/bundles/grocery").Include(
+                        "~/Template/grocery/js/jquery-1.11.1.min.js",
+                        "~/Template/grocery/js/move-top.js",
+                        "~/Template/grocery/js/easing.js"));
+            //Javascript Grocery Footer Template
+            bundles.Add(new ScriptBundle("~/bundles/grocery/footer").Include(
+                        "~/Template/grocery/js/bootstrap.min.js",
+                        "~/Template/grocery/js/minicart.js"));
         }
     }
 }

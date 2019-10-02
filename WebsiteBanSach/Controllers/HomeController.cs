@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebsiteBanSach.DataAccessLayer;
 
 namespace WebsiteBanSach.Controllers
 {
@@ -13,10 +14,31 @@ namespace WebsiteBanSach.Controllers
         //Ctrl + K + D: fomrat code
         //Ctrl + E + W: Wrap code
         //Ctrl + space: Goi y 
+        GroceryEntities dbGrocery;
+
+        public HomeController()
+        {
+            dbGrocery = new GroceryEntities();
+        }
 
         public ActionResult Index()
         {
             return View("TrangChu");
+        }
+
+        public ActionResult Grocery()
+        {
+            //var listProducts = dbGrocery.Products
+            //using (var context = new BloggingContext())
+            //{
+            //var blogs = dbGrocery.Products
+            //    .Include(Product => Product.ima)
+            //    .ToList();
+            //}
+
+            var listProducts = dbGrocery.Products
+                        .ToList();
+            return View(listProducts);
         }
 
         public ActionResult About()

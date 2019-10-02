@@ -49,6 +49,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -171,6 +173,33 @@
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="DataAccessLayer\Category.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\Product.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ProductIamge.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\sysdiagram.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -192,6 +221,16 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="DataAccessLayer\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataAccessLayer\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -201,6 +240,13 @@
     <Content Include="images\book3.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="DataAccessLayer\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DataAccessLayer\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -212,6 +258,146 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Template\grocery\css\bootstrap.css" />
+    <Content Include="Template\grocery\css\creditly.css" />
+    <Content Include="Template\grocery\css\easy-responsive-tabs.css" />
+    <Content Include="Template\grocery\css\flexslider.css" />
+    <Content Include="Template\grocery\css\font-awesome.css" />
+    <Content Include="Template\grocery\css\style.css" />
+    <Content Include="Template\grocery\fonts\fontawesome-webfont.svg" />
+    <Content Include="Template\grocery\images\1.jpg" />
+    <Content Include="Template\grocery\images\1.png" />
+    <Content Include="Template\grocery\images\10.jpg" />
+    <Content Include="Template\grocery\images\10.png" />
+    <Content Include="Template\grocery\images\11.jpg" />
+    <Content Include="Template\grocery\images\11.png" />
+    <Content Include="Template\grocery\images\12.jpg" />
+    <Content Include="Template\grocery\images\12.png" />
+    <Content Include="Template\grocery\images\13.jpg" />
+    <Content Include="Template\grocery\images\13.png" />
+    <Content Include="Template\grocery\images\14.jpg" />
+    <Content Include="Template\grocery\images\14.png" />
+    <Content Include="Template\grocery\images\15.jpg" />
+    <Content Include="Template\grocery\images\15.png" />
+    <Content Include="Template\grocery\images\16.jpg" />
+    <Content Include="Template\grocery\images\16.png" />
+    <Content Include="Template\grocery\images\17.jpg" />
+    <Content Include="Template\grocery\images\17.png" />
+    <Content Include="Template\grocery\images\18.jpg" />
+    <Content Include="Template\grocery\images\18.png" />
+    <Content Include="Template\grocery\images\19.jpg" />
+    <Content Include="Template\grocery\images\19.png" />
+    <Content Include="Template\grocery\images\2.jpg" />
+    <Content Include="Template\grocery\images\2.png" />
+    <Content Include="Template\grocery\images\20.jpg" />
+    <Content Include="Template\grocery\images\20.png" />
+    <Content Include="Template\grocery\images\21.jpg" />
+    <Content Include="Template\grocery\images\21.png" />
+    <Content Include="Template\grocery\images\22.jpg" />
+    <Content Include="Template\grocery\images\22.png" />
+    <Content Include="Template\grocery\images\23.jpg" />
+    <Content Include="Template\grocery\images\23.png" />
+    <Content Include="Template\grocery\images\24.jpg" />
+    <Content Include="Template\grocery\images\24.png" />
+    <Content Include="Template\grocery\images\25.jpg" />
+    <Content Include="Template\grocery\images\25.png" />
+    <Content Include="Template\grocery\images\26.jpg" />
+    <Content Include="Template\grocery\images\26.png" />
+    <Content Include="Template\grocery\images\27.jpg" />
+    <Content Include="Template\grocery\images\27.png" />
+    <Content Include="Template\grocery\images\28.jpg" />
+    <Content Include="Template\grocery\images\28.png" />
+    <Content Include="Template\grocery\images\29.jpg" />
+    <Content Include="Template\grocery\images\29.png" />
+    <Content Include="Template\grocery\images\3.jpg" />
+    <Content Include="Template\grocery\images\3.png" />
+    <Content Include="Template\grocery\images\30.jpg" />
+    <Content Include="Template\grocery\images\30.png" />
+    <Content Include="Template\grocery\images\31.jpg" />
+    <Content Include="Template\grocery\images\31.png" />
+    <Content Include="Template\grocery\images\32.jpg" />
+    <Content Include="Template\grocery\images\32.png" />
+    <Content Include="Template\grocery\images\33.jpg" />
+    <Content Include="Template\grocery\images\33.png" />
+    <Content Include="Template\grocery\images\34.jpg" />
+    <Content Include="Template\grocery\images\34.png" />
+    <Content Include="Template\grocery\images\35.jpg" />
+    <Content Include="Template\grocery\images\35.png" />
+    <Content Include="Template\grocery\images\36.png" />
+    <Content Include="Template\grocery\images\37.png" />
+    <Content Include="Template\grocery\images\38.png" />
+    <Content Include="Template\grocery\images\39.png" />
+    <Content Include="Template\grocery\images\4.jpg" />
+    <Content Include="Template\grocery\images\4.png" />
+    <Content Include="Template\grocery\images\40.png" />
+    <Content Include="Template\grocery\images\41.png" />
+    <Content Include="Template\grocery\images\42.png" />
+    <Content Include="Template\grocery\images\43.png" />
+    <Content Include="Template\grocery\images\44.png" />
+    <Content Include="Template\grocery\images\45.png" />
+    <Content Include="Template\grocery\images\46.png" />
+    <Content Include="Template\grocery\images\47.png" />
+    <Content Include="Template\grocery\images\48.png" />
+    <Content Include="Template\grocery\images\49.png" />
+    <Content Include="Template\grocery\images\5.jpg" />
+    <Content Include="Template\grocery\images\5.png" />
+    <Content Include="Template\grocery\images\50.png" />
+    <Content Include="Template\grocery\images\51.png" />
+    <Content Include="Template\grocery\images\52.png" />
+    <Content Include="Template\grocery\images\53.png" />
+    <Content Include="Template\grocery\images\54.png" />
+    <Content Include="Template\grocery\images\55.png" />
+    <Content Include="Template\grocery\images\56.png" />
+    <Content Include="Template\grocery\images\57.png" />
+    <Content Include="Template\grocery\images\58.png" />
+    <Content Include="Template\grocery\images\59.png" />
+    <Content Include="Template\grocery\images\6.jpg" />
+    <Content Include="Template\grocery\images\6.png" />
+    <Content Include="Template\grocery\images\60.png" />
+    <Content Include="Template\grocery\images\61.png" />
+    <Content Include="Template\grocery\images\62.png" />
+    <Content Include="Template\grocery\images\63.png" />
+    <Content Include="Template\grocery\images\64.png" />
+    <Content Include="Template\grocery\images\65.png" />
+    <Content Include="Template\grocery\images\66.png" />
+    <Content Include="Template\grocery\images\67.png" />
+    <Content Include="Template\grocery\images\68.png" />
+    <Content Include="Template\grocery\images\69.png" />
+    <Content Include="Template\grocery\images\7.jpg" />
+    <Content Include="Template\grocery\images\7.png" />
+    <Content Include="Template\grocery\images\70.png" />
+    <Content Include="Template\grocery\images\71.png" />
+    <Content Include="Template\grocery\images\72.png" />
+    <Content Include="Template\grocery\images\73.png" />
+    <Content Include="Template\grocery\images\74.png" />
+    <Content Include="Template\grocery\images\75.png" />
+    <Content Include="Template\grocery\images\76.png" />
+    <Content Include="Template\grocery\images\8.jpg" />
+    <Content Include="Template\grocery\images\8.png" />
+    <Content Include="Template\grocery\images\9.jpg" />
+    <Content Include="Template\grocery\images\9.png" />
+    <Content Include="Template\grocery\images\arrow.png" />
+    <Content Include="Template\grocery\images\card.png" />
+    <Content Include="Template\grocery\images\cart.png" />
+    <Content Include="Template\grocery\images\close_1.png" />
+    <Content Include="Template\grocery\images\img-sp.png" />
+    <Content Include="Template\grocery\images\offer.png" />
+    <Content Include="Template\grocery\images\paypal.png" />
+    <Content Include="Template\grocery\images\star.png" />
+    <Content Include="Template\grocery\images\star1.png" />
+    <Content Include="Template\grocery\images\tag.png" />
+    <Content Include="Template\grocery\js\bootstrap.min.js" />
+    <Content Include="Template\grocery\js\counterup.min.js" />
+    <Content Include="Template\grocery\js\creditly.js" />
+    <Content Include="Template\grocery\js\easing.js" />
+    <Content Include="Template\grocery\js\easyResponsiveTabs.js" />
+    <Content Include="Template\grocery\js\jquery-1.11.1.min.js" />
+    <Content Include="Template\grocery\js\jquery.flexslider.js" />
+    <Content Include="Template\grocery\js\jquery.wmuSlider.js" />
+    <Content Include="Template\grocery\js\minicart.js" />
+    <Content Include="Template\grocery\js\move-top.js" />
+    <Content Include="Template\grocery\js\okzoom.js" />
+    <Content Include="Template\grocery\js\waypoints.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -249,6 +435,16 @@
     <Content Include="Views\Home\Map.cshtml" />
     <Content Include="Views\Book\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutSach.cshtml" />
+    <Content Include="Views\Shared\_LayoutGrocery.cshtml" />
+    <Content Include="Views\Shared\_TopBar.cshtml" />
+    <Content Include="Template\grocery\fonts\fontawesome-webfont.eot" />
+    <Content Include="Template\grocery\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Template\grocery\fonts\fontawesome-webfont.woff" />
+    <Content Include="Template\grocery\fonts\FontAwesome.otf" />
+    <Content Include="Template\grocery\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Template\grocery\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Views\Home\Grocery.cshtml" />
+    <Content Include="Views\Home\GroceryTemp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -270,6 +466,9 @@
     <EmbeddedResource Include="Migrations\201909110348040_InitialModel.resx">
       <DependentUpon>201909110348040_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
