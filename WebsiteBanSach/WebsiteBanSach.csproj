@@ -171,6 +171,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BookController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="DataAccessLayer\Category.cs">
@@ -207,11 +208,18 @@
     <Compile Include="Migrations\201909110348040_InitialModel.Designer.cs">
       <DependentUpon>201909110348040_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910090133436_AddProduct_ProductImg_Cate_Table.cs" />
+    <Compile Include="Migrations\201910090133436_AddProduct_ProductImg_Cate_Table.Designer.cs">
+      <DependentUpon>201910090133436_AddProduct_ProductImg_Cate_Table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductImage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -257,6 +265,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\json2.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Template\grocery\css\bootstrap.css" />
     <Content Include="Template\grocery\css\creditly.css" />
@@ -445,6 +454,8 @@
     <Content Include="Template\grocery\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\Home\Grocery.cshtml" />
     <Content Include="Views\Home\GroceryTemp.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\Category\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -465,6 +476,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201909110348040_InitialModel.resx">
       <DependentUpon>201909110348040_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910090133436_AddProduct_ProductImg_Cate_Table.resx">
+      <DependentUpon>201910090133436_AddProduct_ProductImg_Cate_Table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
